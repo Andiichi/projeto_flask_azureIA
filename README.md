@@ -8,6 +8,12 @@
 
 `python -m venv .venv`
 
+### Ative ela após a criação
+
+`./.venv/scripts/activade`
+
+**_Dica: Digite o './' e a perte o TAB que vai aparecer as sugestões até chegar nesse acima_**
+
 ### Faça a instalação das nossas bibliotecas python e da nossa IA Azure
 
 `pip install -r requirements.txt`
