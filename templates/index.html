@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Tradutor IA Azure</title>
+</head>
+<body>
+    <div class="container p-5 mb-20">
+        <h1 class="text-lg">Serviço de tradução</h1>
+        <div>Digite um texto, frase ou palavra para traduzir!</div>
+        <div class="container p-2 ">
+            <form method="POST">
+                <div class="pt-2 input-group input-group-lg">
+                   
+                    <textarea class="form-control border" name="text" aria-label="Área para digitar o texto a ser traduzido" placeholder="Digite seu texto aqui..." required></textarea>
+                </div>
+
+                <div class="input-group pt-2" style="width: 350px;">
+                    <select name="language" class="form-select form-control" required>
+                        <option value="" selected disabled>Escolha uma linguagem...</option>
+                        <option value="pt">Português</option>
+                        <option value="en">Inglês</option>
+                        <option value="it">Italiano</option>
+                        <option value="ja">Japonês</option>
+                        <option value="ru">Russo</option>
+                        <option value="de">Alemão</option>
+                    </select>
+                    <button class="btn btn-primary " type="submit">Traduzir</button>
+                </div>
+            </form>
+        </div>
+
+        <footer class="flex text-center mx-auto container sm:w-full w-50 mt-5 ">
+            <div class="d-flex align-items-end ">
+                <p>Feito por <a href="#">Andrezza Nogueira</a> no treinamento da <a href="https://learn.microsoft.com/pt-br/training/modules/python-flask-build-ai-web-app">Microsoft</a> durante o bootcamp da <a href="#">WMC.</a></p>
+            
+            </div>
+            <p><i>Tradução feita com a IA Azure Translate</i></p>
+        </footer>
+    </div>
+
+</body>
+</html>

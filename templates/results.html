@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Resultado</title>
+</head>
+
+<body>
+    <div class="container p-5">
+        <h1 class="text-md">Resultado:</h1>
+        <div class="row">
+            <!-- Coluna Texto Original -->
+            <div class="col-sm-6">
+                <div class="card shadow-sm m-2" style="height: 220px;">
+                    <h5 class="card-header" style="font-size: 15px;">Texto original:</h5>
+                    <div class="card-body overflow-auto">
+                        <p class="card-text text-break text-lowercase" style="font-size: 20px;">{{ original_text }}</p>
+                    </div>
+                    <div class="card-footer" style="font-size: 15px;">
+                        Idioma detectado:
+                        <strong>{{ detected_language_name }}</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coluna Texto Traduzido -->
+            <div class="col-sm-6">
+                <div class="card shadow-sm m-2" style="height: 220px;">
+                    <h5 class="card-header" style="font-size: 15px;">Texto traduzido:</h5>
+                    <div class="card-body overflow-auto">
+                        <p class="card-text text-break text-lowercase" style="font-size: 20px;">{{ translated_text }}</p>
+                    </div>
+                    <div class="card-footer" style="font-size: 15px;">
+                        Idioma de destino:
+                        <strong>
+                            {% if target_language == 'pt' %}
+                                Português
+                            {% if target_language == 'en' %}
+                                Inglês
+                            {% elif target_language == 'it' %}
+                                Italiano
+                            {% elif target_language == 'ja' %}
+                                Japonês
+                            {% elif target_language == 'ru' %}
+                                Russo
+                            {% elif target_language == 'de' %}
+                                Alemão
+                            {% else %}
+                                {{ target_language }}: Linguagem não encontrada!
+                            {% endif %}
+                        </strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="mt-3">
+            <a href="{{ url_for('index') }}"><button class="btn btn-primary">Tente mais uma vez!</button></a>
+        </div>
+
+
+        <footer class="flex text-center mx-auto container sm:w-full w-50 mt-5 ">
+            <div class="d-flex align-items-end ">
+                <p>Feito por <a href="#">Andrezza Nogueira</a> no treinamento da <a href="https://learn.microsoft.com/pt-br/training/modules/python-flask-build-ai-web-app">Microsoft</a> durante o bootcamp da <a href="#">WMC.</a></p>
+            
+            </div>
+            <p><i>Tradução feita com a IA Azure Translate</i></p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
